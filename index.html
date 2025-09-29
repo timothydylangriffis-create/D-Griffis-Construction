@@ -4,20 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>D Griffis Construction LLC - Timeless Homes</title>
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* Fonts + Palette */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-    :root{--primary-color:#3A5A40;--secondary-color:#1C2E20;--text-color:#E5E5E5;--card-color:#293D2C}
-    .project-gradient{background:linear-gradient(to top,var(--card-color) 70%,transparent)}
-    body{font-family:'Inter',sans-serif;background-color:var(--secondary-color);color:var(--text-color);scroll-behavior:smooth}
-    .text-accent{color:var(--primary-color)}.bg-accent{background-color:var(--primary-color)}
-    .project-card{transition:all .3s ease-in-out;cursor:pointer}.project-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.7)}
-    .fixed-nav{background-color:rgba(28,46,32,.95);backdrop-filter:blur(5px)}
-    input[type=text],input[type=email],input[type=tel],textarea{background-color:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:var(--text-color)}
-    input[type=text]:focus,input[type=email]:focus,input[type=tel]:focus,textarea:focus{border-color:var(--primary-color);box-shadow:0 0 0 3px rgba(58,90,64,.5);outline:none}
+    :root {
+      --primary-color:#3A5A40;   /* Hunter green */
+      --secondary-color:#1C2E20; /* Deep forest/charcoal */
+      --text-color:#E5E5E5;      /* Light gray */
+      --card-color:#293D2C;      /* Muted dark green */
+    }
+    body { font-family:'Inter',sans-serif; background-color:var(--secondary-color); color:var(--text-color); scroll-behavior:smooth; }
+    .text-accent { color:var(--primary-color); }
+    .bg-accent { background-color:var(--primary-color); }
+    .fixed-nav { background-color:rgba(28,46,32,.95); backdrop-filter:blur(5px); }
+    .project-card { transition:all .3s ease-in-out; cursor:pointer; }
+    .project-card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,.7); }
+    .project-gradient { background: linear-gradient(to top, var(--card-color) 70%, transparent); }
+
+    /* Inputs */
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+      background-color: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      color:var(--text-color);
+    }
+    input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(58,90,64,.5);
+      outline: none;
+    }
   </style>
 </head>
 <body class="antialiased">
+
+  <!-- Fixed Navigation -->
   <nav class="fixed-nav w-full z-50 shadow-lg hidden md:block">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
@@ -25,15 +46,19 @@
         <div class="flex space-x-6">
           <a href="#about" class="text-gray-300 hover:text-accent transition font-medium">About</a>
           <a href="#portfolio" class="text-gray-300 hover:text-accent transition font-medium">Portfolio</a>
-          <a href="#contact" class="px-3 py-1 rounded-full text-white transition font-medium" style="background-color:var(--primary-color);">Contact Us</a>
+          <a href="#contact" class="px-3 py-1 rounded-full text-white transition font-medium" style="background-color:var(--primary-color);">Contact</a>
         </div>
       </div>
     </div>
   </nav>
 
+  <!-- Hero -->
   <header id="hero" class="h-screen flex items-center justify-center text-center p-4 shadow-xl"
     style="background-image:url('https://placehold.co/1200x800/293D2C/E5E5E5?text=Luxury+Farmhouse+Build');background-size:cover;background-position:center;background-blend-mode:overlay;background-color:rgba(41,61,44,.7);">
-    <div class="max-w-4xl mx-auto backdrop-blur-sm p-8 rounded-xl shadow-2xl" style="background-color:rgba(41,61,44,.7);border:1px solid rgba(58,90,64,.5);">
+    <div class="max-w-4xl mx-auto backdrop-blur-sm p-8 md:p-10 rounded-xl shadow-2xl"
+         style="background-color:rgba(41,61,44,.7); border:1px solid rgba(58,90,64,.5);">
+
+      <!-- SVG wordmark -->
       <div class="text-white mb-6 flex justify-center">
         <svg viewBox="0 0 1000 300" class="w-full max-w-sm md:max-w-xl h-auto" fill="white" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle">
           <title id="logoTitle">D Griffis Construction Logo</title>
@@ -46,17 +71,176 @@
           </text>
         </svg>
       </div>
-      <p class="text-lg md:text-2xl font-light text-gray-300 mt-10 mb-8 max-w-2xl mx-auto">
+
+      <p class="text-lg md:text-2xl font-light text-gray-300 mt-6 mb-8 max-w-2xl mx-auto">
         Certified Residential Contractor (<strong>CRC1335226</strong>) dedicated to <strong>quality, durability, and classic design</strong> in Northeast Florida.
       </p>
-      <a href="#contact" class="inline-block px-10 py-4 text-white font-bold rounded-full shadow-lg transition transform hover:scale-105 uppercase tracking-wider text-lg" style="background-color:var(--primary-color);">
-        Start Your Project Today
-      </a>
+
+      <!-- Scrolls to contact -->
+      <a href="#contact" class="inline-block px-10 py-4 text-white font-bold rounded-full shadow-lg transition transform hover:scale-105 uppercase tracking-wider text-lg"
+         style="background-color:var(--primary-color);">Start Your Project Today</a>
     </div>
   </header>
 
-  <footer class="py-8 border-t border-gray-700/50 text-center text-sm text-gray-500" style="background-color:var(--card-color);">
+  <!-- Credentials -->
+  <section id="credentials" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style="background-color:var(--card-color);">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white">Our Foundation: Experience &amp; Credentials</h2>
+      <div class="text-lg leading-relaxed text-gray-300 max-w-4xl mx-auto">
+        <p class="mb-8">We ensure every home is built to the highest standards, blending quality craftsmanship with the unique character of the region.</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mt-8">
+          <div class="p-4 rounded-lg flex items-center shadow-lg w-full sm:w-auto"
+               style="background-color:rgba(255,255,255,.06); border:1px solid rgba(58,90,64,.4);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="font-semibold text-gray-200 text-lg">Serving: Northeast Florida</span>
+          </div>
+          <div class="p-4 rounded-lg flex items-center shadow-lg w-full sm:w-auto"
+               style="background-color:rgba(255,255,255,.06); border:1px solid rgba(58,90,64,.4);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span class="font-semibold text-gray-200 text-lg">License: CRC1335226</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="lg:flex lg:items-center lg:space-x-12">
+        <div class="lg:w-1/3 mb-10 lg:mb-0">
+          <img src="https://placehold.co/400x500/3A5A40/1C2E20?text=Quality+Focus" alt="Architectural sketch"
+               class="rounded-xl shadow-2xl" style="border:1px solid rgba(58,90,64,.5);">
+        </div>
+        <div class="lg:w-2/3">
+          <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-white">Building on Southern Soil</h2>
+          <p class="text-lg leading-relaxed text-gray-300 mb-6">
+            D Griffis Construction LLC believes a custom home should be a reflection of its owner and a testament to lasting quality.
+          </p>
+          <p class="text-lg leading-relaxed text-gray-300 mb-6">
+            We guide you through every phase—from blueprint consultation to move-in—with transparency and attention to detail.
+          </p>
+          <a href="#portfolio" class="inline-block mt-2 text-accent font-semibold text-lg hover:underline">See Our Process in Action →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style="background-color:var(--card-color);">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-16 text-white">Featured Custom Builds</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+        <!-- Project 1 -->
+        <a href="https://drive.google.com/drive/folders/13rsbV28CiTokR6nCTi25cdhFf77WZa1C" target="_blank"
+           class="project-card block rounded-xl overflow-hidden shadow-xl"
+           style="border:1px solid rgba(107,114,128,.5);">
+          <div class="relative h-72">
+            <img src="https://placehold.co/600x400/3A5A40/E5E5E5?text=T+%26+G+Farms+Exterior" alt="T & G Farms" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 project-gradient p-6">
+              <h3 class="text-2xl font-bold text-accent mb-1">T &amp; G Farms</h3>
+              <p class="text-sm text-gray-300">2700 sq ft Custom Farmhouse Build</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-300">Modern farmhouse aesthetic with rugged, durable materials.</p>
+            <span class="inline-block mt-4 text-sm text-accent font-semibold hover:underline">View Photo Gallery →</span>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="https://drive.google.com/drive/folders/1-1mHN7nkul4hsVdKDZKC7RUSANltRdLa" target="_blank"
+           class="project-card block rounded-xl overflow-hidden shadow-xl"
+           style="border:1px solid rgba(107,114,128,.5);">
+          <div class="relative h-72">
+            <img src="https://placehold.co/600x400/3A5A40/E5E5E5?text=Project+228+Finished+Build" alt="Project 228" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 project-gradient p-6">
+              <h3 class="text-2xl font-bold text-accent mb-1">Project 228</h3>
+              <p class="text-sm text-gray-300">2200 sq ft Custom Farmhouse Build</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-300">Classic Southern-style home with large porches and efficient materials.</p>
+            <span class="inline-block mt-4 text-sm text-accent font-semibold hover:underline">View Photo Gallery →</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="text-center mt-16">
+        <p class="text-gray-400 text-sm italic">Click on any project card to view the full Google Drive photo gallery.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-4 text-white">Let’s Discuss Your Vision</h2>
+      <p class="text-lg text-gray-400 text-center mb-10">Tell us about your project and we’ll reach out to schedule a consultation.</p>
+
+      <!-- Quick actions -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <a href="mailto:dgriffisconstruction@gmail.com" class="px-6 py-3 rounded-lg text-white font-semibold text-center"
+           style="background-color:var(--primary-color);">Email Us</a>
+        <a href="tel:+19045146677" class="px-6 py-3 rounded-lg text-white font-semibold text-center"
+           style="background-color:var(--primary-color);">Call (904) 514-6677</a>
+      </div>
+
+      <!-- Simple front-end form -->
+      <form id="contactForm" onsubmit="submitForm(event)"
+            class="bg-white/5 p-6 rounded-xl shadow-2xl" style="border:1px solid rgba(58,90,64,.4);">
+        <div class="grid grid-cols-1 gap-5">
+          <div>
+            <label class="block text-sm text-gray-300 mb-2">Full Name</label>
+            <input type="text" name="name" required class="w-full p-3 rounded-md">
+          </div>
+          <div>
+            <label class="block text-sm text-gray-300 mb-2">Email</label>
+            <input type="email" name="email" required class="w-full p-3 rounded-md">
+          </div>
+          <div>
+            <label class="block text-sm text-gray-300 mb-2">Phone</label>
+            <input type="tel" name="phone" class="w-full p-3 rounded-md">
+          </div>
+          <div>
+            <label class="block text-sm text-gray-300 mb-2">Project Details (Size, Location, Type)</label>
+            <textarea name="details" rows="4" required class="w-full p-3 rounded-md"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="mt-6 w-full px-6 py-3 rounded-lg text-white font-semibold"
+                style="background-color:var(--primary-color);">Send Inquiry</button>
+
+        <!-- Success message -->
+        <div id="successMessage" class="hidden mt-6 p-4 text-center rounded-lg"
+             style="border:1px solid var(--primary-color); background-color: rgba(58,90,64,.2);">
+          <p class="font-semibold text-accent">Thank you! Your inquiry has been received. We’ll contact you shortly.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t text-center text-sm text-gray-500"
+          style="border-color: rgba(107,114,128,.5); background-color:var(--card-color);">
     <p>&copy; 2024 D Griffis Construction LLC. | Timeless Homes — Southern Soil.</p>
   </footer>
+
+  <!-- Minimal JS for the form UX -->
+  <script>
+    function submitForm(e){
+      e.preventDefault();
+      const form = document.getElementById('contactForm');
+      const success = document.getElementById('successMessage');
+      // Hide inputs & submit button
+      [...form.querySelectorAll('input, textarea, button')].forEach(el => el.disabled = true);
+      success.classList.remove('hidden');
+      // (Optional) send to your email/API here
+      // For now just log:
+      const data = Object.fromEntries(new FormData(form).entries());
+      console.log('Lead:', data);
+    }
+  </script>
 </body>
 </html>
